@@ -5,7 +5,7 @@
   modes of convergence on simulated data: in probability, almost surely,
 in r-th mean and in law.}
 \usage{
-check.convergence(nmax,M,genXn,argsXn=NULL,mode="p",epsilon=0.05,r=2,nb.sp=10,density=FALSE,densfunc=dnorm,probfunc=pnorm,tinf=-3,tsup=3,trace=plot,...)
+check.convergence(nmax,M,genXn,argsXn=NULL,mode="p",epsilon=0.05,r=2,nb.sp=10,density=FALSE,densfunc=dnorm,probfunc=pnorm,tinf=-3,tsup=3,plotfunc=plot,...)
 }
 
 \arguments{
@@ -23,8 +23,8 @@ check.convergence(nmax,M,genXn,argsXn=NULL,mode="p",epsilon=0.05,r=2,nb.sp=10,de
  	\item{probfunc}{ function to compute the distribution function of X.}
  	\item{tinf}{ lower limit for investigating convergence in law.}
  	\item{tsup}{ upper limit for investigating convergence in law.}
- 	\item{trace}{  type of function used to draw the plot: \code{plot} or \code{points}.}
- 	\item{...}{ optional arguments to \code{trace}.}
+ 	\item{plotfunc}{ R function used to draw the plot: for example \code{plot} or \code{points}.}
+ 	\item{...}{ optional arguments to \code{plotfunc}.}
        }
 
        
@@ -33,7 +33,7 @@ The objective of this function is to investigate graphically the convergence of 
 random variable Xn to some random variable X. In order to use it, you
 should be able to provide generators of Xn and X (or of Xn-X). The four modes of
 convergence that you can try are: in probability, almost surely, in r-th
-mean and in law. For the convergence in law, we compute \eqn{$\hat(l)_n(t)$}{hat(l)_n(t)}
+mean and in law. For the convergence in law, we compute \eqn{$\hat(l)_n(t)=|\hat{F}_n(t)-F(t)|$}{hat(l)_n(t)=|\hat{F}_n(t)-F(t)|}
 for ten values equally distributed between \code{tinf} and \code{tsup}.
 }
 

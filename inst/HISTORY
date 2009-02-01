@@ -3,3 +3,11 @@
 
 Version 0.5 : First released version submitted to CRAN.
 
+2009-02-01
+----------
+
+Version 0.6 : 
+- The label $\hat{l}_n(t)$ has been replaced by $\hat{l}_n(t)=|\hat{F}_n(t)-F(t)|$. This has also been added in the documentation for \verb#check.convergence#.
+- The \verb#trace# argument has been changed into the \verb#plotfunc# argument which should hopefully be a more meaningfull name. It can be used to choose the type of function used to draw the plot (for example \verb#plot# or \verb#points#). It is mainly a technical argument required because a second call to the \verb#plot# function replaces the previous plot. So, for example, if you want to draw two curves on the same plot, you should first use the \verb#plot# function then second use the \verb#points# function (with type="l"). This is for example used in Example 2 where we want to draw 3 curves on the same plot (see R code source inside investigate.R file). But maybe there is a clever way to code this? The description of this argument in help files is now : R function used to draw the plot: for example \verb#plot# or \verb#points#.
+- I replaced the p="" argument of the plot.ecdf function (inside law.plot2d function) with do.points=FALSE since the former is now obsolete in newer R versions.
+- I replaced everywhere lwd=0.01 with lwd=1 since it does not give good results in newer R versions.

@@ -35,7 +35,7 @@ p.as.plot <- function(data,critp,critas,epsilon=0.05,nb.sp=10,mode="p") {
     }
     
     # This draws the nb.sp sample paths
-    visualize.sp(data,epsilon,nb.sp,trace=points,col="grey")
+    visualize.sp(data,epsilon,nb.sp,plotfunc=points,col="grey")
 
     # This puts red marks for each sample path going off the band [-epsilon;+epsilon] at (or after if a.s. convergence is considered) n=nn
     if (mode=="p") {
@@ -84,10 +84,10 @@ p.as.plot <- function(data,critp,critas,epsilon=0.05,nb.sp=10,mode="p") {
     
     # This draws the convergence criterion curves (prob and a.s.)
     critp <- critp[NameVal1:NameVal2]
-    visualize.crit(critp,trace=points,col="blue")
+    visualize.crit(critp,plotfunc=points,col="blue")
     critas[(K*nmax+1):nmax] <- NA
     critas <- critas[NameVal1:NameVal2]
-    visualize.crit(critas,trace=points,col="red")
+    visualize.crit(critas,plotfunc=points,col="red")
 
     index <- nn-NameVal1+1
     if (index<1) index <- NA

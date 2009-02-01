@@ -286,9 +286,9 @@ OnOK <- function(...)
 
        myrbinom<-function(n,alpha){rbinom(n,1,1/(1:n))*((1:n)**alpha)}
 
-       check.convergence(nmax=2000,M=500,genXn=myrbinom,argsXn=list(alpha=0.5),mode="r",r=3,trace=plot,col="green",ylim=c(0,300))
-       check.convergence(nmax=2000,M=500,genXn=myrbinom,argsXn=list(alpha=0.5),mode="r",r=2,trace=points,col="blue",ylim=c(0,300))
-       check.convergence(nmax=2000,M=500,genXn=myrbinom,argsXn=list(alpha=0.5),mode="r",r=1,trace=points,col="red",ylim=c(0,300))
+       check.convergence(nmax=2000,M=500,genXn=myrbinom,argsXn=list(alpha=0.5),mode="r",r=3,plotfunc=plot,col="green",ylim=c(0,300))
+       check.convergence(nmax=2000,M=500,genXn=myrbinom,argsXn=list(alpha=0.5),mode="r",r=2,plotfunc=points,col="blue",ylim=c(0,300))
+       check.convergence(nmax=2000,M=500,genXn=myrbinom,argsXn=list(alpha=0.5),mode="r",r=1,plotfunc=points,col="red",ylim=c(0,300))
        text(100,-5,'r=1',xpd=TRUE,col='red')
        text(200,5,'r=2',xpd=TRUE,col='blue')
        text(300,50,'r=3',xpd=TRUE,col='green')

@@ -1,4 +1,4 @@
-check.convergence <- function(nmax,M,genXn,argsXn=NULL,mode="p",epsilon=0.05,r=2,nb.sp=10,density=FALSE,densfunc=dnorm,probfunc=pnorm,tinf=-3,tsup=3,trace=plot,...) {
+check.convergence <- function(nmax,M,genXn,argsXn=NULL,mode="p",epsilon=0.05,r=2,nb.sp=10,density=FALSE,densfunc=dnorm,probfunc=pnorm,tinf=-3,tsup=3,plotfunc=plot,...) {
 
 
   data <- generate(randomgen=genXn,nmax,M,argsgen=argsXn)$data
@@ -27,14 +27,12 @@ check.convergence <- function(nmax,M,genXn,argsXn=NULL,mode="p",epsilon=0.05,r=2
 
     critr <- criterion(data=data,epsilon=epsilon,mode="r",r=r)$crit
 
-    visualize.crit(critr,trace=trace,main=paste("Convergence in r-th mean?",sep=""),...)
+    visualize.crit(critr,plotfunc=plotfunc,main=paste("Convergence in r-th mean?",sep=""),...)
     
     mtext(expression(hat(e)[n~bold(',')~'r']),side=2,line=2,las=2)
-
-    tt <- FALSE
     
   }
 
-  return(tt)
+  if (mode != "r")  return(tt)
   
 }

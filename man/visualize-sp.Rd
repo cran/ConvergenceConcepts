@@ -3,15 +3,15 @@
 \title{Visualisation of sample paths}
 \description{This function enables one to visualize the sample paths.}
 \usage{
-visualize.sp(data,epsilon=0.05,nb.sp=10,trace=plot,...)
+visualize.sp(data,epsilon=0.05,nb.sp=10,plotfunc=plot,...)
 }
 
 \arguments{
 	\item{data}{ matrix containing the sample paths of Xn-X values.}
 	\item{epsilon}{ a numeric value giving the interval endpoint.}
 	\item{nb.sp}{ number of sample paths to draw on the plot.}
-	\item{trace}{ type of function used to draw the plot: \code{plot} or \code{points}.}
-	\item{...}{ optional arguments to \code{trace}.}
+	\item{plotfunc}{ R function used to draw the plot: for example \code{plot} or \code{points}.}
+	\item{...}{ optional arguments to \code{plotfunc}.}
 }
 
 \references{Lafaye de Micheaux, P. (\email{plafaye@club.fr}), Liquet, B. "Understanding Convergence Concepts: a Visual-Minded and Graphical Simulation-Based Approach", The American Statistician , submitted.}

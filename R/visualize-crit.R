@@ -1,6 +1,6 @@
  # To draw the criterion curve
-visualize.crit <- function(crit,trace=plot,...) {
+visualize.crit <- function(crit,plotfunc=plot,...) {
 
-  trace(crit,type="l",xlab="n",ylab='',lwd=0.01,...)
+  plotfunc(crit,type="l",xlab="n",ylab='',lwd=1,...)
 
 }

@@ -3,13 +3,13 @@
 \title{Visualisation of convergence criterion curves}
 \description{This function enables one to visualize the convergence criterion curve.}
 \usage{
-visualize.crit(crit,trace=plot,...)
+visualize.crit(crit,plotfunc=plot,...)
 }
 
 \arguments{
 	\item{crit}{ vector containing the criterion values.}
-	\item{trace}{ type of function used to draw the plot: \code{plot} or \code{points}.}
-	\item{...}{ optional arguments to \code{trace}.}
+	\item{plotfunc}{ R function used to draw the plot: for example \code{plot} or \code{points}.}
+	\item{...}{ optional arguments to \code{plotfunc}.}
 }
 
 \references{Lafaye de Micheaux, P. (\email{plafaye@club.fr}), Liquet, B. "Understanding Convergence Concepts: a Visual-Minded and Graphical Simulation-Based Approach", The American Statistician , submitted.}
