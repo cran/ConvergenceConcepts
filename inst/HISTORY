@@ -11,3 +11,17 @@ Version 0.6 :
 - The \verb#trace# argument has been changed into the \verb#plotfunc# argument which should hopefully be a more meaningfull name. It can be used to choose the type of function used to draw the plot (for example \verb#plot# or \verb#points#). It is mainly a technical argument required because a second call to the \verb#plot# function replaces the previous plot. So, for example, if you want to draw two curves on the same plot, you should first use the \verb#plot# function then second use the \verb#points# function (with type="l"). This is for example used in Example 2 where we want to draw 3 curves on the same plot (see R code source inside investigate.R file). But maybe there is a clever way to code this? The description of this argument in help files is now : R function used to draw the plot: for example \verb#plot# or \verb#points#.
 - I replaced the p="" argument of the plot.ecdf function (inside law.plot2d function) with do.points=FALSE since the former is now obsolete in newer R versions.
 - I replaced everywhere lwd=0.01 with lwd=1 since it does not give good results in newer R versions.
+
+2009-10-19
+----------
+
+Version 0.7 :
+- I updated the CITATION file to suppress WARNING on CRAN
+
+2009-12-22
+----------
+
+Version 0.8 :
+- I added checks for of platform type (unix, windows,mac) to launch the proper window device (X11, windows or quartz) in function investigate()
+- I modified the text for Example 3 where there were a mistake: we want to check convergence in law to a N(0,1) distribution and not towards 0.
+- I modified the law-plot2d.R file where I permuted the plot.ecd() and curve() functions, and remove par(new=TRUE)

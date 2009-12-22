@@ -140,7 +140,7 @@ for (i in 1:9) {
     box()
     text(0.5,0.9,expression("Let " ~ Z[1] ~ ",... , " ~ Z[n] ~ "be " ~ chi[1]^{2} ~ " independent random variables."))
     text(0.5,0.7,expression("Let " ~ X[n]==frac(1,sqrt(n))*bgroup("[",frac(sum(Z[i], i==1, n)-n,sqrt(2)),"]") ~ "."))
-    text(0.5,0.5,expression("Does" ~ X[n] ~ " " ~ frac(L,"     ")~">" ~0 ~ "?"))
+    text(0.5,0.5,expression("Does" ~ X[n] ~ " " ~ frac(L,"     ")~">" ~"N(0,1)" ~ "?"))
 
       
     }
@@ -196,7 +196,7 @@ OnOK <- function(...)
 
 ########### Exercise 1 ###########
 
-       pnotasgen<-function(n){
+       pnotasgen <- function(n){
        Z<-runif(1)
        k<-floor(log2(1:n))
        m<-1:n-2^k
@@ -212,7 +212,7 @@ OnOK <- function(...)
 
 ########### Exercise 2 ###########
 
-       lnotpgen<-function(n){x<-rnorm(n);x-x[1]}
+       lnotpgen <- function(n){x<-rnorm(n);x-x[1]}
 
        tt2.2 <<- check.convergence(nmax=2000,M=500,genXn=lnotpgen,mode="p")
 
@@ -222,7 +222,11 @@ OnOK <- function(...)
 
 ########### Exercise 3 ###########
 
-       pnotrgen<-function(n){rbinom(n,1,1/(1:n))*sqrt(1:n)}
+       pnotrgen <- function(n){rbinom(n,1,1/(1:n))*sqrt(1:n)}
+
+       if (.Platform$OS.type=="unix") X11()
+       if (.Platform$OS.type=="windows") windows()
+       if (.Platform$OS.type=="mac") quartz()
 
        check.convergence(nmax=1000,M=10000,genXn=pnotrgen,mode="r",r=2,ylim=c(0,5))
        legend("topleft",legend=expression(hat(e)[n~bold(',')~'2']),lty=1)
@@ -235,7 +239,11 @@ OnOK <- function(...)
 
 ########### Exercise 4 ###########
 
-       asnotrgen<-function(n){x<-2^(1:n);res<-(runif(1)<1/(1:n))*x;res[is.infinite(x)]<-0;return(res)}
+       asnotrgen <- function(n){x<-2^(1:n);res<-(runif(1)<1/(1:n))*x;res[is.infinite(x)]<-0;return(res)}
+
+       if (.Platform$OS.type=="unix") X11()
+       if (.Platform$OS.type=="windows") windows()
+       if (.Platform$OS.type=="mac") quartz()
 
        check.convergence(nmax=10,M=500,genXn=asnotrgen,mode="r",r=2)
        legend("topleft",legend=expression(hat(e)[n~bold(',')~'2']),lty=1)
@@ -247,7 +255,11 @@ OnOK <- function(...)
 
 ########### Exercise 5 ###########
 
-       rnotasgen<-function(n){if (n == 1) res <- 1 else if (n == 2) res <- c(1,1) else res<-c(1,1,cumsum(rnorm(n))[-(1:2)]/sqrt(2*(3:n)*log(log(3:n))))}
+       rnotasgen <- function(n){if (n == 1) res <- 1 else if (n == 2) res <- c(1,1) else res<-c(1,1,cumsum(rnorm(n))[-(1:2)]/sqrt(2*(3:n)*log(log(3:n))))}
+
+       if (.Platform$OS.type=="unix") X11()
+       if (.Platform$OS.type=="windows") windows()
+       if (.Platform$OS.type=="mac") quartz()
 
        check.convergence(nmax=2000,M=500,genXn=rnotasgen,mode="r",r=2,col="red")
        points(3:1000,1/(2*log(log(3:1000))),type="l",col="blue")
@@ -260,8 +272,12 @@ OnOK <- function(...)
 
 ########### Exercise 6 ###########
 
-       gen6.1<-function(n){res<-cumsum(floor(10*runif(n))/(10^(1:n)))}
-       gen6.2<-function(n){res<-cumsum(floor(10*runif(n))/(10^(1:n)))-runif(1)}
+       gen6.1 <- function(n){res<-cumsum(floor(10*runif(n))/(10^(1:n)))}
+       gen6.2 <- function(n){res<-cumsum(floor(10*runif(n))/(10^(1:n)))-runif(1)}
+
+       if (.Platform$OS.type=="unix") X11()
+       if (.Platform$OS.type=="windows") windows()
+       if (.Platform$OS.type=="mac") quartz()
 
        tt6.1 <<- check.convergence(nmax=20,M=5000,genXn=gen6.1,mode="L",density=FALSE,densfunc=dunif,probfunc=punif,tinf=-0.1,tsup=1.1)
        tt6.2 <<- check.convergence(nmax=2000,M=500,genXn=gen6.2,mode="as")
@@ -284,7 +300,11 @@ OnOK <- function(...)
 
 ########### Example 2 ###########
 
-       myrbinom<-function(n,alpha){rbinom(n,1,1/(1:n))*((1:n)**alpha)}
+       myrbinom <- function(n,alpha){rbinom(n,1,1/(1:n))*((1:n)**alpha)}
+
+       if (.Platform$OS.type=="unix") X11()
+       if (.Platform$OS.type=="windows") windows()
+       if (.Platform$OS.type=="mac") quartz()
 
        check.convergence(nmax=2000,M=500,genXn=myrbinom,argsXn=list(alpha=0.5),mode="r",r=3,plotfunc=plot,col="green",ylim=c(0,300))
        check.convergence(nmax=2000,M=500,genXn=myrbinom,argsXn=list(alpha=0.5),mode="r",r=2,plotfunc=points,col="blue",ylim=c(0,300))
@@ -300,8 +320,11 @@ OnOK <- function(...)
 
 ########### Example 3 ###########
 
-      X11(width=2,height=2);plot.new();title("Please wait ...")
-      X11()
+      
+      if (.Platform$OS.type=="unix") X11(width=2,height=2);plot.new();title("Please wait ...");X11()
+      if (.Platform$OS.type=="windows") windows(width=2,height=2);plot.new();title("Please wait ...");windows()
+      if (.Platform$OS.type=="mac") quartz(width=2,height=2);plot.new();title("Please wait ...");quartz()
+      
       if (exists("bringToTop")) bringToTop(dev.prev())
       rand1 <- function(n){(cumsum(rchisq(n,df=1))-(1:n))/sqrt(2*(1:n))}
       tt8.1 <<- check.convergence(nmax=200,M=5000,genXn=rand1,mode="L",density=FALSE,densfunc=dnorm,probfunc=pnorm,tinf=-4,tsup=4)

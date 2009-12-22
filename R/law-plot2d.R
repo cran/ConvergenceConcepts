@@ -13,10 +13,10 @@ law.plot2d <- function(data,density=FALSE,densfunc=dnorm,probfunc=pnorm,tinf=-5,
            freq=FALSE,breaks=ceiling(nn/10)+1)
     }
     else {
-      curve(probfunc,xlim=c(tinf,tsup),xlab="",ylab="",main="")
-      par(new=TRUE)
       plot.ecdf(ecdf(data[,nn]),do.points=FALSE,xlim=c(tinf,tsup),col.h="red",xlab="t",ylab=expression(F~"(t) and " ~ hat(F)[n]~"(t)"),main="Convergence in law?")
-      legend(x=tinf, y=1, legend=c("F(t)",expression(hat(F)[n](t))), col = c("black","red"),lty=1)
+      curve(probfunc,xlim=c(tinf,tsup),xlab="",ylab="",main="",add=TRUE)
+#      par(new=TRUE)
+#      legend(x=tinf, y=1, legend=c("F(t)",expression(hat(F)[n](t))), col = c("black","red"),lty=1)
     }				}
                  )
   f <- function(...) {
