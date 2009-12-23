@@ -321,9 +321,9 @@ OnOK <- function(...)
 ########### Example 3 ###########
 
       
-      if (.Platform$OS.type=="unix") X11(width=2,height=2);plot.new();title("Please wait ...");X11()
-      if (.Platform$OS.type=="windows") windows(width=2,height=2);plot.new();title("Please wait ...");windows()
-      if (.Platform$OS.type=="mac") quartz(width=2,height=2);plot.new();title("Please wait ...");quartz()
+      if (.Platform$OS.type=="unix") {X11(width=2,height=2);plot.new();title("Please wait ...");X11()}
+      if (.Platform$OS.type=="windows") {windows(width=2,height=2);plot.new();title("Please wait ...");windows()}
+      if (.Platform$OS.type=="mac") {quartz(width=2,height=2);plot.new();title("Please wait ...");quartz()}
       
       if (exists("bringToTop")) bringToTop(dev.prev())
       rand1 <- function(n){(cumsum(rchisq(n,df=1))-(1:n))/sqrt(2*(1:n))}

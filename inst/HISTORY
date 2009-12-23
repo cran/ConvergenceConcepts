@@ -25,3 +25,9 @@ Version 0.8 :
 - I added checks for of platform type (unix, windows,mac) to launch the proper window device (X11, windows or quartz) in function investigate()
 - I modified the text for Example 3 where there were a mistake: we want to check convergence in law to a N(0,1) distribution and not towards 0.
 - I modified the law-plot2d.R file where I permuted the plot.ecd() and curve() functions, and remove par(new=TRUE)
+
+2009-12-23
+----------
+
+Version 0.9 :
+- I modified a mistake for the checks for of platform type (unix, windows,mac) to launch the proper window device (X11, windows or quartz) in function investigate()

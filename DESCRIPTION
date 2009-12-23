@@ -1,6 +1,6 @@
 Package: ConvergenceConcepts
-Version: 0.8
-Date: 2009-12-22
+Version: 0.9
+Date: 2009-12-23
 Title: Seeing convergence concepts in action
 Author: P. Lafaye de Micheaux <lafaye@dms.umontreal.ca>, B. Liquet
         <Benoit.Liquet@isped.u-bordeaux2.fr>.
@@ -12,6 +12,6 @@ Description: This package provides a way to investigate various modes
 License: GPL (>= 2)
 URL: http://www.r-project.org,
         http://www.biostatisticien.eu/ConvergenceConcepts/
-Packaged: 2009-12-22 21:07:49 UTC; root
+Packaged: 2009-12-23 15:48:56 UTC; root
 Repository: CRAN
-Date/Publication: 2009-12-23 08:18:06
+Date/Publication: 2009-12-24 10:41:47
