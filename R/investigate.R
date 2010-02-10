@@ -76,7 +76,6 @@ for (i in 1:9) {
     plot.window(xlim=c(0,1),ylim=c(0,1))
     box()
     text(0.5,0.9,expression("Let Z be U[0,1] and let" ~ X[n]==2^n ~ "1"["[0,1/n)"](Z)))
-    text(0.5,0.8,expression("where" ~ n==2^k+m ~ "for " ~ k<=1 ~ "and with " ~ 0<=m ~ ""<2^k ~ "."))
     text(0.5,0.7,expression("Does" ~ X[n] ~ " " ~ frac("r","     ")~">" ~0 ~ "? Does" ~ X[n] ~ " " ~ frac("a.s.","     ")~">" ~0 ~ "?"))
     }
 

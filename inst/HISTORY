@@ -31,3 +31,8 @@ Version 0.8 :
 
 Version 0.9 :
 - I modified a mistake for the checks for of platform type (unix, windows,mac) to launch the proper window device (X11, windows or quartz) in function investigate()
+
+2010-02-10
+----------
+Version 1.0 :
+- I removed a line in the file investigate.R because a line should not appear in the subject of exercice 4.
