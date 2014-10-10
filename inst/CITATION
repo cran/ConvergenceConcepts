@@ -10,7 +10,7 @@ citEntry(entry="Article",
 	 volume = "63",
 	 number = "2",
 	 pages = "173-178",
-         note         = "Software: R Package, ConvergenceConcepts, version 0.9",
+         note         = "Software: R Package, ConvergenceConcepts, version 1.1",
          url          = "http://www.biostatisticien.eu/ConvergenceConcepts/",
          
          textVersion = 
@@ -19,7 +19,7 @@ citEntry(entry="Article",
                "The American Statistician",
 	       "Teacher\'s Corner",
 	       "Vol. 63, No. 2, 173--178",
-              "(Software: R Package, ConvergenceConcepts, version 0.9)"
+              "(Software: R Package, ConvergenceConcepts, version 1.1)"
 	      )
 )
 

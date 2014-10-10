@@ -98,7 +98,7 @@ p.as.plot <- function(data,critp,critas,epsilon=0.05,nb.sp=10,mode="p") {
 
     # The title
     if (mode=="p") {title(bquote(textstyle(bold(atop("Criterion value for convergence in probability.","We have " ~ hat(p)[n] ==  .(round(critp[index]*M,3)) ~ "/" ~ .(M) == .(round(critp[index],3)) ~ "(based on all the M=" ~ .(M) ~ "sample paths).")))))}
-    if (mode=="as") {title(bquote(textstyle(bold(atop("Criterion value for convergence almost surely.","We have " ~ hat(a)[n] ==  .(round(critp[index]*M,3)) ~ "/" ~ .(M) == .(round(critp[index],3)) ~ "(based on all the M=" ~ .(M) ~ "sample paths).")))))}
+    if (mode=="as") {title(bquote(textstyle(bold(atop("Criterion value for convergence almost surely.","We have " ~ hat(a)[n] ==  .(round(critas[index]*M,3)) ~ "/" ~ .(M) == .(round(critas[index],3)) ~ "(based on all the M=" ~ .(M) ~ "sample paths).")))))}
     title(sub=paste("n=",format(nn),sep=""))
 
     # Some useful information to help reading the plot
