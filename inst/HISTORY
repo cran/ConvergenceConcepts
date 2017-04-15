@@ -48,3 +48,17 @@ Version 1.1:
 - I added tcltk in Depends field of DESCRIPTION file and in import of NAMESPACE file
 - I used environments in the investigate.R file to remove NOTEs appearing when R CMD check our package
 
+2017-04-10
+----------
+
+Version 1.2:
+- I modified the DESCRIPTION and the NAMESPACE files
+- I updated the reference of our publication in all Rd files
+- I added grDevices for the Depends field in file DESCRIPTION
+- I added grDevices:: in R/investigate.R in front of bringToTop function
+
+2017-04-15
+----------
+
+Version 1.2.1:
+- I modified the Description field in the DESCRIPTION file

@@ -31,7 +31,7 @@ based on the frequentist approach.
 \item{crit }{the vector of criterion values.}
 }
 
-\references{Lafaye de Micheaux, P. (\email{plafaye@club.fr}), Liquet, B. "Understanding Convergence Concepts: a Visual-Minded and Graphical Simulation Based Approach", The American Statistician , submitted.}
+\references{Lafaye de Micheaux, P. (\email{plafaye@club.fr}), Liquet, B. "Understanding Convergence Concepts: a Visual-Minded and Graphical Simulation Based Approach", The American Statistician, 63:2, 173--178, (2009).}
 
 
 \author{P. Lafaye de Micheaux and B. Liquet}

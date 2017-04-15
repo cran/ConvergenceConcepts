@@ -14,7 +14,7 @@ law.plot3d(data,probfunc,tinf=-5,tsup=5)
 	\item{tsup}{ upper limit for investigating convergence in law.}
 }
 
-\references{Lafaye de Micheaux, P. (\email{plafaye@club.fr}), Liquet, B. "Understanding Convergence Concepts: a Visual-Minded and Graphical Simulation-Based Approach", The American Statistician , submitted.}
+\references{Lafaye de Micheaux, P. (\email{plafaye@club.fr}), Liquet, B. "Understanding Convergence Concepts: a Visual-Minded and Graphical Simulation-Based Approach", The American Statistician, 63:2, 173--178, (2009).}
 
 
 \author{P. Lafaye de Micheaux and B. Liquet}
@@ -30,7 +30,7 @@ law.plot3d(data,probfunc,tinf=-5,tsup=5)
 
 \examples{
 rand <- function(n){(cumsum(rchisq(n,df=1))-(1:n))/sqrt(2*(1:n))}
-data <- generate(randomgen=rand,nmax=500,M=5000)$data
+data <- generate(randomgen=rand,nmax=300,M=2000)$data
 law.plot3d(data,pnorm)
 }
 

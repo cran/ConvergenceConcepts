@@ -14,7 +14,7 @@ visualize.sp(data,epsilon=0.05,nb.sp=10,plotfunc=plot,...)
 	\item{...}{ optional arguments to \code{plotfunc}.}
 }
 
-\references{Lafaye de Micheaux, P. (\email{plafaye@club.fr}), Liquet, B. "Understanding Convergence Concepts: a Visual-Minded and Graphical Simulation-Based Approach", The American Statistician , submitted.}
+\references{Lafaye de Micheaux, P. (\email{plafaye@club.fr}), Liquet, B. "Understanding Convergence Concepts: a Visual-Minded and Graphical Simulation-Based Approach", The American Statistician, 63:2, 173--178, (2009).}
 
 
 \author{P. Lafaye de Micheaux and B. Liquet}

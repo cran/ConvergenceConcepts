@@ -332,7 +332,7 @@ investigate <- function() {
                                         #      if (.Platform$OS.type=="mac") {quartz(width=2,height=2);plot.new();title("Please wait ...");quartz()}
                 dev.new(width=2,height=2);plot.new();title("Please wait ...");dev.new()
 
-                if (exists("bringToTop", envir = above.env)) bringToTop(dev.prev())
+                if (exists("bringToTop", envir = above.env)) grDevices::bringToTop(dev.prev())
                 rand1 <- function(n){(cumsum(rchisq(n,df=1))-(1:n))/sqrt(2*(1:n))}
                 assign("tt8.1", check.convergence(nmax=200,M=5000,genXn=rand1,mode="L",density=FALSE,densfunc=dnorm,probfunc=pnorm,tinf=-4,tsup=4), above.env)
                 dev.off() 

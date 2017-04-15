@@ -7,3 +7,13 @@ import(
   tkrplot,
   lattice
 )
+
+importFrom("grDevices", "dev.new", "dev.off", "dev.prev","graphics.off")
+importFrom("graphics", "abline", "axis", "box", "curve", "hist", "legend", "mtext", "par", "plot", "plot.new", "plot.window",
+     "points", "rect", "text", "title")
+importFrom("stats", "dnorm", "dunif", "ecdf", "plot.ecdf", "pnorm","punif", "rbinom", "rchisq", "rnorm", "runif")
+
+                                        # The bringToTop() function in only available in the (Microsoft) Windows
+# version of package "grDevices", 
+if (.Platform$OS.type == "windows") importFrom("grDevices", "bringToTop")
+
