@@ -62,3 +62,10 @@ Version 1.2:
 
 Version 1.2.1:
 - I modified the Description field in the DESCRIPTION file
+
+2019-09-18
+----------
+
+Version 1.2.2:
+- I modified the DOI entry in the DESCRIPTION file to resolve a CHECK note
+- I removed the Author: field in the DESCRIPTION file
