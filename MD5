@@ -1,4 +1,4 @@
-778b395cdb7a0cb9daef5c40656f6fb5 *DESCRIPTION
+59c56aabe390d12bbb150472f727e9e5 *DESCRIPTION
 cfdf7d7385b1691a37c6c6486c57f375 *INDEX
 d1a9ca8d00d6fb873e8cf3809389e6a8 *NAMESPACE
 28469dc4c0e221b95ca7683d4557755a *R/check-convergence.R
@@ -11,9 +11,9 @@ ebae340a24ccb37c1c9d8213c2a9a936 *R/p-as-plot.R
 24b20b40a7d969039e6231afb8204666 *R/visualize-crit.R
 dcbb4b9899d83cc584bc74577f7132ad *R/visualize-sp.R
 17c89af19f75824c6f314ec5a0b4e30a *inst/CITATION
-8f37c9c14ddab3e488b16505a40cab5b *inst/HISTORY
-8075697c57adf729afb58af69595db74 *man/check-convergence.Rd
-f750b53372fbb40e673bfd98d2f15d40 *man/criterion.Rd
+7f590e235e559c78aad73e2b5c49f2d9 *inst/HISTORY
+d0da9f95d48e673d0a4b1442df278bfe *man/check-convergence.Rd
+cd5855e191aafb42ac8fe5b81bdaf789 *man/criterion.Rd
 b90ee683e8112c761be45d917f9ed471 *man/generate.Rd
 bfaf1de0ceb3fcb8459308b2aa8f9801 *man/investigate.Rd
 6c613c0e5d52faf434fac694badb8379 *man/law-plot2d.Rd

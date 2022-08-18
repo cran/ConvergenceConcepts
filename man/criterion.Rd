@@ -17,12 +17,12 @@ criterion(data,epsilon=0.05,mode="p",r=2)
 }
 
 \details{
-The \code{data} matrix contains the \eqn{$X_n-X$}{X_n-X} values. If mode="p",
-\code{criterion} approximates \eqn{$p_n=P[|X_n-X|>\epsilon]$}{p_n=P[|X_n-X|>\epsilon]}. If mode="as",
-\code{criterion} approximates \eqn{$a_n=P[\exists k\geq
-  n;|X_k-X|>\epsilon]$}{a_n=P[it exists k>= n;|X_k-X|>\epsilon]}. If mode="r",
+The \code{data} matrix contains the \eqn{X_n-X}{X_n-X} values. If mode="p",
+\code{criterion} approximates \eqn{p_n=P[|X_n-X|>\epsilon]}{p_n=P[|X_n-X|>\epsilon]}. If mode="as",
+\code{criterion} approximates \eqn{a_n=P[\exists k\geq
+  n;|X_k-X|>\epsilon]}{a_n=P[it exists k>= n;|X_k-X|>\epsilon]}. If mode="r",
 \code{criterion} approximates
-\eqn{$e_{n,r}=E|X_n-X|^r$}{e_{n,r}=E|X_n-X|^r}. The approximations are
+\eqn{e_{n,r}=E|X_n-X|^r}{e_{n,r}=E|X_n-X|^r}. The approximations are
 based on the frequentist approach.
 }
 

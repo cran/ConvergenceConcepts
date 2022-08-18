@@ -34,7 +34,7 @@ The objective of this function is to investigate graphically the convergence of 
 random variable Xn to some random variable X. In order to use it, you
 should be able to provide generators of Xn and X (or of Xn-X). The four modes of
 convergence that you can try are: in probability, almost surely, in r-th
-mean and in law. For the convergence in law, we compute \eqn{$\hat(l)_n(t)=|\hat{F}_n(t)-F(t)|$}{hat(l)_n(t)=|\hat{F}_n(t)-F(t)|}
+mean and in law. For the convergence in law, we compute \eqn{\hat(l)_n(t)=|\hat{F}_n(t)-F(t)|}{hat(l)_n(t)=|\hat{F}_n(t)-F(t)|}
 for ten values equally distributed between \code{tinf} and \code{tsup}.
 }
 
